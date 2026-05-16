@@ -58,17 +58,7 @@
     <!-- CTA buttons -->
     <div class="flex flex-wrap items-center gap-3 pt-1">
       <CopyButton :text="'https://meuip.me/ip'" :label="t('api.copyEndpoint')" />
-      <NuxtLink
-        :to="localePath('/what-is-my-ip')"
-        class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium border transition-colors"
-        style="border-color: var(--border); color: var(--text-muted)"
-        :class="'hover:border-blue-500/50 hover:text-blue-500 dark:hover:text-blue-400'"
-      >
-        {{ t('api.docs') }}
-        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-        </svg>
-      </NuxtLink>
+      
     </div>
   </section>
 </template>
