@@ -10,18 +10,18 @@
       <div class="glass-card p-5">
         <p class="text-xs text-blue-400 uppercase tracking-widest font-medium mb-2">IPv4 Address</p>
         <p class="text-2xl font-bold font-mono text-white break-all">{{ ipv4 || '...' }}</p>
-        <span class="mt-2 badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">✓ Conectado</span>
+        <span class="mt-2 badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">{{ t('home.connected') }}</span>
       </div>
 
       <!-- IPv6 -->
       <div class="glass-card p-5">
         <p class="text-xs text-blue-400 uppercase tracking-widest font-medium mb-2">IPv6 Address</p>
-        <p class="text-2xl font-bold font-mono text-white break-all">{{ ipv6 || 'Não disponível' }}</p>
+        <p class="text-2xl font-bold font-mono text-white break-all">{{ ipv6 || t('home.notAvailable') }}</p>
         <span
           class="mt-2 badge"
           :class="ipv6 ? 'bg-emerald-500/10 text-emerald-400 border border-emerald-500/20' : 'bg-red-500/10 text-red-400 border border-red-500/20'"
         >
-          {{ ipv6 ? '✓ IPv6 ativo' : '✗ IPv6 indisponível' }}
+          {{ ipv6 ? t('home.ipv6Active') : t('home.ipv6Unavailable') }}
         </span>
       </div>
     </div>
@@ -44,6 +44,7 @@ useSeoMeta({
 
 useHead({ link: [{ rel: 'canonical', href: 'https://meuip.me/ipv6-test' }] })
 
+const { t } = useI18n()
 const ipv4 = ref('')
 const ipv6 = ref('')
 

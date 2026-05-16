@@ -28,6 +28,10 @@
     "ipv6": "IPv6",
     "available": "可用",
     "unavailable": "不可用",
+    "ipv6Active": "✓ IPv6 已启用",
+    "ipv6Unavailable": "✗ IPv6 不可用",
+    "connected": "✓ 已连接",
+    "notAvailable": "不可用",
     "language": "语言",
     "history": "IP历史记录",
     "clearHistory": "清除历史"

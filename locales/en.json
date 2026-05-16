@@ -28,6 +28,10 @@
     "ipv6": "IPv6",
     "available": "Available",
     "unavailable": "Unavailable",
+    "ipv6Active": "✓ IPv6 active",
+    "ipv6Unavailable": "✗ IPv6 unavailable",
+    "connected": "✓ Connected",
+    "notAvailable": "Not available",
     "language": "Language",
     "history": "IP History",
     "clearHistory": "Clear history"
