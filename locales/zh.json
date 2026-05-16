@@ -1,4 +1,22 @@
 {
+  "theme": {
+    "light": "亮色",
+    "dark": "暗色",
+    "system": "跟随系统"
+  },
+  "api": {
+    "title": "使用我们的API",
+    "subtitle": "秒级集成。无需认证，无速率限制，完全免费。",
+    "latency": "< 50ms 延迟",
+    "noAuth": "无需认证",
+    "free": "100% 免费",
+    "simple": "简单且有文档",
+    "endpoint": "接口地址",
+    "copyEndpoint": "复制接口",
+    "docs": "API 文档",
+    "plainResponse": "纯文本响应",
+    "jsonResponse": "JSON响应"
+  },
   "nav": {
     "home": "首页",
     "browser": "浏览器"

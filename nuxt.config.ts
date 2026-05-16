@@ -39,6 +39,13 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       htmlAttrs: { lang: 'pt-BR' },
+      script: [
+        // Anti-flicker: apply theme class before paint
+        {
+          innerHTML: `(function(){var t=localStorage.getItem('meuipme_theme')||'system';var r=t==='system'?(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'):t;document.documentElement.classList.add(r);document.documentElement.setAttribute('data-theme',r);})();`,
+          type: 'text/javascript',
+        },
+      ],
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },

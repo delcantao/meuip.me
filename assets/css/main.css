@@ -3,13 +3,31 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-bg:      #020617;
-    --color-surface: #0f172a;
-    --color-border:  #1e293b;
-    --color-text:    #f1f5f9;
-    --color-muted:   #94a3b8;
-    --color-brand:   #3b82f6;
+  /* ── Dark theme (default) ── */
+  :root,
+  html.dark {
+    --bg:           #020617;
+    --bg-surface:   #0f172a;
+    --bg-card:      rgba(15, 23, 42, 0.6);
+    --border:       rgba(30, 41, 59, 0.6);
+    --border-hover: rgba(51, 65, 85, 0.8);
+    --text:         #f1f5f9;
+    --text-muted:   #94a3b8;
+    --text-subtle:  #475569;
+    --brand:        #3b82f6;
+  }
+
+  /* ── Light theme ── */
+  html.light {
+    --bg:           #f8fafc;
+    --bg-surface:   #ffffff;
+    --bg-card:      rgba(255, 255, 255, 0.85);
+    --border:       rgba(226, 232, 240, 0.8);
+    --border-hover: rgba(148, 163, 184, 0.6);
+    --text:         #0f172a;
+    --text-muted:   #475569;
+    --text-subtle:  #94a3b8;
+    --brand:        #2563eb;
   }
 
   html {
@@ -19,39 +37,72 @@
   }
 
   body {
-    @apply font-sans bg-[#020617] text-slate-100;
+    @apply font-sans transition-colors duration-200;
+    background-color: var(--bg);
+    color: var(--text);
+  }
+
+  html.dark body {
     background-image:
       radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59,130,246,0.12), transparent),
       radial-gradient(ellipse 60% 40% at 80% 100%, rgba(59,130,246,0.06), transparent);
     background-attachment: fixed;
   }
 
-  ::selection {
-    @apply bg-blue-600 text-white;
+  html.light body {
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(37,99,235,0.04), transparent);
+    background-attachment: fixed;
   }
 
-  * {
-    @apply border-slate-800;
+  ::selection {
+    @apply bg-blue-600 text-white;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-slate-900/60 backdrop-blur-sm border border-slate-800/60 rounded-2xl;
-    box-shadow: 0 1px 0 0 rgba(255,255,255,0.04) inset,
-                0 4px 32px 0 rgba(0,0,0,0.3);
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    @apply backdrop-blur-sm rounded-2xl transition-colors duration-200;
+    box-shadow: 0 1px 0 0 rgba(255,255,255,0.04) inset, 0 4px 32px 0 rgba(0,0,0,0.08);
+  }
+
+  html.light .glass-card {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.06), 0 4px 16px 0 rgba(0,0,0,0.04);
   }
 
   .glass-card-hover {
-    @apply glass-card transition-all duration-200 hover:border-slate-700/80 hover:bg-slate-900/80;
+    @apply glass-card transition-all duration-200;
+  }
+
+  .glass-card-hover:hover {
+    border-color: var(--border-hover);
   }
 
   .glow-border {
-    box-shadow: 0 0 0 1px rgba(59,130,246,0.3),
-                0 0 20px 0 rgba(59,130,246,0.1);
+    box-shadow: 0 0 0 1px rgba(59,130,246,0.3), 0 0 20px 0 rgba(59,130,246,0.1);
+  }
+
+  html.light .glow-border {
+    box-shadow: 0 0 0 1px rgba(37,99,235,0.2), 0 4px 24px 0 rgba(37,99,235,0.08);
   }
 
   .badge {
     @apply inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+
+  .header-bg {
+    border-color: var(--border);
+    background-color: var(--bg);
+    background-image: none;
+  }
+
+  html.dark .header-bg {
+    background-color: rgba(2, 6, 23, 0.85);
+  }
+
+  html.light .header-bg {
+    background-color: rgba(248, 250, 252, 0.9);
   }
 }

@@ -1,4 +1,22 @@
 {
+  "theme": {
+    "light": "Claro",
+    "dark": "Oscuro",
+    "system": "Sistema"
+  },
+  "api": {
+    "title": "Usa nuestra API",
+    "subtitle": "Integra en segundos. Sin autenticación, sin límites, completamente gratuito.",
+    "latency": "< 50ms de latencia",
+    "noAuth": "Sin autenticación",
+    "free": "100% gratuito",
+    "simple": "Simple y documentado",
+    "endpoint": "Endpoint",
+    "copyEndpoint": "Copiar endpoint",
+    "docs": "Documentación API",
+    "plainResponse": "Respuesta en texto plano",
+    "jsonResponse": "Respuesta en JSON"
+  },
   "nav": {
     "home": "Inicio",
     "browser": "Navegador"

@@ -6,8 +6,8 @@
 
     <!-- Heading -->
     <div class="text-center space-y-2 animate-fade-in">
-      <h1 class="text-2xl sm:text-3xl font-bold text-white">{{ t('home.title') }}</h1>
-      <p class="text-slate-400 text-sm sm:text-base max-w-md mx-auto">{{ t('home.subtitle') }}</p>
+      <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white">{{ t('home.title') }}</h1>
+      <p class="text-slate-500 dark:text-slate-400 text-sm sm:text-base max-w-md mx-auto">{{ t('home.subtitle') }}</p>
     </div>
 
     <!-- IP Card -->
@@ -26,8 +26,8 @@
     <!-- IP History -->
     <div v-if="history.length" class="glass-card p-5 animate-fade-in">
       <div class="flex items-center justify-between mb-3">
-        <h2 class="text-sm font-semibold text-slate-300">{{ t('home.history') }}</h2>
-        <button @click="clearHistory" class="text-xs text-slate-500 hover:text-red-400 transition-colors">
+        <h2 class="text-sm font-semibold text-slate-700 dark:text-slate-300">{{ t('home.history') }}</h2>
+        <button @click="clearHistory" class="text-xs text-slate-400 dark:text-slate-500 hover:text-red-500 dark:hover:text-red-400 transition-colors">
           {{ t('home.clearHistory') }}
         </button>
       </div>
@@ -37,11 +37,14 @@
           :key="entry.ip + entry.date"
           class="flex items-center justify-between text-sm"
         >
-          <span class="font-mono text-slate-200">{{ entry.ip }}</span>
-          <span class="text-xs text-slate-500">{{ entry.isp }} · {{ formatDate(entry.date) }}</span>
+          <span class="font-mono text-slate-800 dark:text-slate-200">{{ entry.ip }}</span>
+          <span class="text-xs text-slate-400 dark:text-slate-500">{{ entry.isp }} · {{ formatDate(entry.date) }}</span>
         </li>
       </ul>
     </div>
+
+    <!-- API CTA -->
+    <ApiSection />
 
   </div>
 </template>

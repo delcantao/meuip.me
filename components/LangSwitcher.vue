@@ -2,7 +2,10 @@
   <div class="relative" ref="dropdownRef">
     <button
       @click="open = !open"
-      class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-sm text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
+      class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-sm transition-colors"
+      style="color: var(--text-muted)"
+      :style="{ color: 'var(--text-muted)' }"
+      :class="'hover:bg-black/5 dark:hover:bg-white/5 dark:hover:text-white hover:text-slate-900'"
     >
       <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -31,8 +34,8 @@
           :key="locale.code"
           :to="switchLocalePath(locale.code)"
           @click="open = false"
-          class="block px-3 py-2 text-sm text-slate-400 hover:text-white hover:bg-slate-800/60 transition-colors"
-          :class="{ 'text-blue-400': locale.code === currentLocale?.code }"
+          class="block px-3 py-2 text-sm transition-colors hover:bg-black/5 dark:hover:bg-white/5 hover:text-slate-900 dark:hover:text-white"
+          :style="{ color: locale.code === currentLocale?.code ? 'var(--brand)' : 'var(--text-muted)' }"
         >
           {{ locale.name }}
         </NuxtLink>

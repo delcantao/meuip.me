@@ -1,15 +1,15 @@
 <template>
   <div class="glass-card p-6 sm:p-8 animate-slide-up glow-border">
     <!-- Label -->
-    <p class="text-xs font-medium text-blue-400 uppercase tracking-widest mb-3">
+    <p class="text-xs font-medium text-blue-500 dark:text-blue-400 uppercase tracking-widest mb-3">
       {{ t('ip.yourIp') }}
     </p>
 
     <!-- IP Address -->
     <div class="flex items-center gap-3 flex-wrap">
       <span
-        class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight font-mono break-all"
-        :class="{ 'animate-pulse text-slate-500': !ip }"
+        class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 dark:text-white tracking-tight font-mono break-all"
+        :class="{ 'animate-pulse text-slate-400 dark:text-slate-500': !ip }"
       >
         {{ ip || '••••••••••••' }}
       </span>

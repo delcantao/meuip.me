@@ -1,27 +1,31 @@
 <template>
-  <header class="sticky top-0 z-50 border-b border-slate-800/60 bg-[#020617]/80 backdrop-blur-md">
+  <header class="sticky top-0 z-50 border-b backdrop-blur-md transition-colors duration-200 header-bg">
     <div class="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between gap-4">
       <!-- Logo -->
-      <NuxtLink :to="localePath('/')" class="flex items-center gap-2 text-white font-semibold tracking-tight">
+      <NuxtLink :to="localePath('/')" class="flex items-center gap-2 font-semibold tracking-tight" style="color: var(--text)">
         <span class="text-blue-400">⬡</span>
         <span>meuip<span class="text-blue-400">.me</span></span>
       </NuxtLink>
 
       <!-- Nav -->
-      <nav class="hidden sm:flex items-center gap-1 text-sm text-slate-400">
+      <nav class="hidden sm:flex items-center gap-1 text-sm" style="color: var(--text-muted)">
         <NuxtLink
           v-for="link in navLinks"
           :key="link.to"
           :to="localePath(link.to)"
-          class="px-3 py-1.5 rounded-lg hover:text-white hover:bg-slate-800/60 transition-colors"
-          active-class="text-white bg-slate-800/60"
+          class="px-3 py-1.5 rounded-lg transition-colors hover:bg-black/5 dark:hover:bg-white/5"
+          style="color: inherit"
+          active-class="!text-[var(--text)] bg-black/5 dark:bg-white/5"
         >
           {{ link.label }}
         </NuxtLink>
       </nav>
 
-      <!-- Lang switcher -->
-      <LangSwitcher />
+      <!-- Right controls -->
+      <div class="flex items-center gap-1">
+        <ThemeToggle />
+        <LangSwitcher />
+      </div>
     </div>
   </header>
 </template>

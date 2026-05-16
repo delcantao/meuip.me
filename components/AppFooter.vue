@@ -1,9 +1,9 @@
 <template>
   <footer class="border-t border-slate-800/60 py-8 mt-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-slate-500">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm" style="color: var(--text-muted)">
       <p>
         © {{ new Date().getFullYear() }}
-        <span class="text-slate-400 font-medium">meuip.me</span>
+        <span class="font-medium" style="color: var(--text)">meuip.me</span>
         — {{ t('footer.rights') }}
       </p>
       <div class="flex items-center gap-4">
