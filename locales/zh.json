@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "首页",
+    "browser": "浏览器"
+  },
+  "footer": {
+    "rights": "保留所有权利"
+  },
+  "ip": {
+    "yourIp": "您的IP地址",
+    "share": "分享",
+    "copied": "已复制！"
+  },
+  "copy": {
+    "copy": "复制",
+    "copied": "已复制！"
+  },
+  "home": {
+    "title": "我的IP是什么？",
+    "subtitle": "实时获取您的公共IP、位置和网络信息。",
+    "country": "国家",
+    "city": "城市",
+    "isp": "网络提供商",
+    "asn": "ASN",
+    "timezone": "时区",
+    "os": "操作系统",
+    "browser": "浏览器",
+    "ipv6": "IPv6",
+    "available": "可用",
+    "unavailable": "不可用",
+    "language": "语言",
+    "history": "IP历史记录",
+    "clearHistory": "清除历史"
+  },
+  "meta": {
+    "home": {
+      "title": "我的IP是什么？| meuip.me",
+      "description": "实时获取您的公共IP地址、位置、ISP和网络信息。快速、准确、免费。"
+    }
+  }
+}

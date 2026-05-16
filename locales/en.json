@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "browser": "Browser"
+  },
+  "footer": {
+    "rights": "All rights reserved"
+  },
+  "ip": {
+    "yourIp": "Your IP address",
+    "share": "Share",
+    "copied": "Copied!"
+  },
+  "copy": {
+    "copy": "Copy",
+    "copied": "Copied!"
+  },
+  "home": {
+    "title": "What is my IP?",
+    "subtitle": "Discover your public IP, location and network information in real time.",
+    "country": "Country",
+    "city": "City",
+    "isp": "ISP / Provider",
+    "asn": "ASN",
+    "timezone": "Timezone",
+    "os": "Operating system",
+    "browser": "Browser",
+    "ipv6": "IPv6",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "language": "Language",
+    "history": "IP History",
+    "clearHistory": "Clear history"
+  },
+  "meta": {
+    "home": {
+      "title": "What is my IP? | meuip.me",
+      "description": "Find your public IP address, location, ISP and network details in real time. Fast, accurate and free."
+    }
+  }
+}

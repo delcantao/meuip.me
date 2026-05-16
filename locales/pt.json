@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Início",
+    "browser": "Navegador"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados"
+  },
+  "ip": {
+    "yourIp": "Seu endereço IP",
+    "share": "Compartilhar",
+    "copied": "Copiado!"
+  },
+  "copy": {
+    "copy": "Copiar",
+    "copied": "Copiado!"
+  },
+  "home": {
+    "title": "Qual é o meu IP?",
+    "subtitle": "Descubra seu IP público, localização e informações de rede em tempo real.",
+    "country": "País",
+    "city": "Cidade",
+    "isp": "Provedor (ISP)",
+    "asn": "ASN",
+    "timezone": "Fuso horário",
+    "os": "Sistema operacional",
+    "browser": "Navegador",
+    "ipv6": "IPv6",
+    "available": "Disponível",
+    "unavailable": "Indisponível",
+    "language": "Idioma",
+    "history": "Histórico de IPs",
+    "clearHistory": "Limpar histórico"
+  },
+  "meta": {
+    "home": {
+      "title": "Qual é o meu IP? | meuip.me",
+      "description": "Descubra seu IP público, localização, provedor e informações de rede em tempo real. Rápido, preciso e gratuito."
+    }
+  }
+}
