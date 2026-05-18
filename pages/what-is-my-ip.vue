@@ -36,15 +36,25 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
+useSeoPage({
   title:       'What is my IP address? | meuip.me',
-  description: 'Learn what an IP address is and discover your public IP instantly. Free IP lookup tool.',
-  ogTitle:     'What is my IP address?',
-  ogUrl:       'https://meuip.me/what-is-my-ip',
-  robots:      'index, follow',
+  description: 'Learn what an IP address is, how it works, and discover your public IPv4/IPv6 address instantly. Free, accurate lookup with no tracking.',
+  path:        '/what-is-my-ip',
+  keywords:    'what is my ip, my ip address, public ip, ip lookup, ip checker, find my ip, what is my public ip',
+  jsonLd: [
+    jsonLdWebPage({
+      name:        'What is my IP address?',
+      description: 'Find your public IP address and learn how IP addressing works.',
+      url:         'https://meuip.me/what-is-my-ip',
+      breadcrumbs: [{ name: 'Home', url: 'https://meuip.me' }, { name: 'What is my IP', url: 'https://meuip.me/what-is-my-ip' }],
+    }),
+    jsonLdWebApplication({
+      name:        'IP Address Lookup — meuip.me',
+      description: 'Free public IP address checker. Instant IPv4 and IPv6 detection with geolocation.',
+      url:         'https://meuip.me/what-is-my-ip',
+    }),
+  ],
 })
-
-useHead({ link: [{ rel: 'canonical', href: 'https://meuip.me/what-is-my-ip' }] })
 
 const ip = ref('')
 onMounted(async () => {

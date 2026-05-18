@@ -1,4 +1,19 @@
 User-agent: *
 Allow: /
 
+Disallow: /api/
+Disallow: /_nuxt/
+Disallow: /debug/
+Disallow: /temp/
+Disallow: /private/
+Disallow: /.nuxt/
+
+# Google
+User-agent: Googlebot
+Allow: /
+
+# Bing
+User-agent: Bingbot
+Allow: /
+
 Sitemap: https://meuip.me/sitemap.xml

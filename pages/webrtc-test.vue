@@ -51,11 +51,17 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title:       'WebRTC Leak Test | meuip.me',
-  description: 'Check if WebRTC is leaking your real IP address. Test your VPN and browser privacy.',
-  ogUrl:       'https://meuip.me/webrtc-test',
-  robots:      'index, follow',
+useSeoPage({
+  title:       'WebRTC Leak Test — Check if WebRTC exposes your real IP | meuip.me',
+  description: 'Detect WebRTC IP leaks in your browser. Check if your real IP address is being exposed to websites even while using a VPN.',
+  path:        '/webrtc-test',
+  keywords:    'webrtc leak test, webrtc leak, vpn leak, real ip address, webrtc ip, browser privacy, hide ip',
+  jsonLd: jsonLdWebPage({
+    name:        'WebRTC Leak Test',
+    description: 'Free WebRTC leak test — detect if your real IP address is exposed by WebRTC.',
+    url:         'https://meuip.me/webrtc-test',
+    breadcrumbs: [{ name: 'Home', url: 'https://meuip.me' }, { name: 'WebRTC Leak Test', url: 'https://meuip.me/webrtc-test' }],
+  }),
 })
 
 const tested    = ref(false)

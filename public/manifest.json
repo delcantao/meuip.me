@@ -1,0 +1,21 @@
+{
+  "name": "meuip.me — Qual é o meu IP?",
+  "short_name": "meuip.me",
+  "description": "Descubra seu IP público, localização e informações de rede em tempo real.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "lang": "pt-BR",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "categories": ["utilities", "productivity"],
+  "screenshots": [],
+  "shortcuts": [
+    { "name": "IPv6 Test",     "url": "/ipv6-test",     "description": "Check IPv6 connectivity" },
+    { "name": "DNS Leak Test", "url": "/dns-leak-test", "description": "Test for DNS leaks" },
+    { "name": "WebRTC Test",   "url": "/webrtc-test",   "description": "Check for WebRTC leaks" }
+  ]
+}

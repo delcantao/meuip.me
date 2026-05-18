@@ -59,5 +59,39 @@
       "title": "What is my IP? | meuip.me",
       "description": "Find your public IP address, location, ISP and network details in real time. Fast, accurate and free."
     }
+  },
+  "seo": {
+    "whatIsIp": {
+      "heading": "What is an IP address?",
+      "p1": "An IP address (Internet Protocol address) is a unique numerical identifier assigned to every device connected to a network. It works like a postal address for the internet, telling routers where to send and receive data packets.",
+      "p2": "There are two types: a private IP used within your local network (like your home Wi-Fi), and a public IP — the address the rest of the internet sees. This tool detects and displays your public IP in real time."
+    },
+    "ipv4vsIpv6": {
+      "heading": "IPv4 vs IPv6 — what is the difference?",
+      "p1": "IPv4 uses 32-bit addresses in the familiar \"203.0.113.1\" format, supporting around 4 billion unique addresses. Because that pool is nearly exhausted, IPv6 was introduced with 128-bit addresses (e.g. \"2001:db8::1\"), enabling a virtually unlimited number of connected devices.",
+      "p2": "Most modern ISPs provide dual-stack connectivity, meaning you have both an IPv4 and an IPv6 address. Use our IPv6 test tool to check whether your connection fully supports the newer protocol."
+    },
+    "whyKnow": {
+      "heading": "Why should you know your IP address?",
+      "p1": "Knowing your public IP address has many practical uses:",
+      "li1": "Set up remote access (VPN, SSH, IP cameras) with your source IP",
+      "li2": "Verify that your VPN is active and actually masking your real IP",
+      "li3": "Diagnose connectivity issues when contacting your ISP's support",
+      "li4": "Understand the geographic location websites and services perceive for you"
+    },
+    "vpn": {
+      "heading": "VPN, privacy and online anonymity",
+      "p1": "A VPN (Virtual Private Network) replaces your public IP with the VPN server's IP address, hiding your real location from websites and online services. When connected to a VPN, this site should display the VPN server's IP rather than your home IP.",
+      "p2": "However, beware: beyond the IP itself, other vectors can still expose your identity — such as DNS and WebRTC leaks. Use our DNS Leak Test and WebRTC Leak Test tools to make sure your VPN is protecting you end-to-end."
+    },
+    "tools": {
+      "heading": "Related tools",
+      "whatIsMyIp": "What is my IP?",
+      "ipv6Test": "IPv6 Test",
+      "dnsLeak": "DNS Leak Test",
+      "webrtc": "WebRTC Test",
+      "browser": "Browser Info",
+      "headers": "HTTP Headers"
+    }
   }
 }

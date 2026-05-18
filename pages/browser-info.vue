@@ -28,11 +28,17 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title:       'Browser Information | meuip.me',
-  description: 'See detailed information about your browser, OS, screen resolution and device capabilities.',
-  ogUrl:       'https://meuip.me/browser-info',
-  robots:      'index, follow',
+useSeoPage({
+  title:       'Browser Information — Detect your browser, OS & device | meuip.me',
+  description: 'Detect your browser, operating system, language, screen resolution and device capabilities. Free browser fingerprint tool.',
+  path:        '/browser-info',
+  keywords:    'browser information, browser fingerprint, detect browser, browser details, os detection, user agent, screen resolution',
+  jsonLd: jsonLdWebPage({
+    name:        'Browser Information',
+    description: 'Detailed browser, OS and device detection tool.',
+    url:         'https://meuip.me/browser-info',
+    breadcrumbs: [{ name: 'Home', url: 'https://meuip.me' }, { name: 'Browser Information', url: 'https://meuip.me/browser-info' }],
+  }),
 })
 
 const info = ref<any>(null)

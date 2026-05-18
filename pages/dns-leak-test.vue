@@ -47,11 +47,17 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title:       'DNS Leak Test | meuip.me',
-  description: 'Test for DNS leaks and check if your VPN is properly protecting your DNS queries.',
-  ogUrl:       'https://meuip.me/dns-leak-test',
-  robots:      'index, follow',
+useSeoPage({
+  title:       'DNS Leak Test — Check if your VPN is leaking DNS | meuip.me',
+  description: 'Run a free DNS leak test to verify your VPN is protecting your DNS queries. Detect exposed DNS servers in seconds.',
+  path:        '/dns-leak-test',
+  keywords:    'dns leak test, dns leak, vpn dns leak, check dns leak, dns privacy, my dns server, verify dns',
+  jsonLd: jsonLdWebPage({
+    name:        'DNS Leak Test',
+    description: 'Free DNS leak test — check if your VPN is properly protecting your DNS queries.',
+    url:         'https://meuip.me/dns-leak-test',
+    breadcrumbs: [{ name: 'Home', url: 'https://meuip.me' }, { name: 'DNS Leak Test', url: 'https://meuip.me/dns-leak-test' }],
+  }),
 })
 
 const loading = ref(false)

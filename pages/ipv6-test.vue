@@ -35,14 +35,20 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
+useSeoPage({
   title:       'IPv6 Test — Check your IPv6 connectivity | meuip.me',
-  description: 'Test if your internet connection supports IPv6. Find your IPv4 and IPv6 addresses instantly.',
-  ogUrl:       'https://meuip.me/ipv6-test',
-  robots:      'index, follow',
+  description: 'Test if your internet connection supports IPv6. Instantly detect your IPv4 and IPv6 addresses. Free online IPv6 connectivity checker.',
+  path:        '/ipv6-test',
+  keywords:    'ipv6 test, my ipv6, check ipv6, ipv6 address, meu ipv6, teste ipv6, ipv6 connectivity, ipv4 vs ipv6',
+  jsonLd: [
+    jsonLdWebPage({
+      name:        'IPv6 Test — Check your IPv6 connectivity',
+      description: 'Test if your internet connection supports IPv6 and find your IPv6 address.',
+      url:         'https://meuip.me/ipv6-test',
+      breadcrumbs: [{ name: 'Home', url: 'https://meuip.me' }, { name: 'IPv6 Test', url: 'https://meuip.me/ipv6-test' }],
+    }),
+  ],
 })
-
-useHead({ link: [{ rel: 'canonical', href: 'https://meuip.me/ipv6-test' }] })
 
 const { t } = useI18n()
 const ipv4 = ref('')

@@ -24,11 +24,17 @@
 </template>
 
 <script setup lang="ts">
-useSeoMeta({
-  title:       'HTTP Headers | meuip.me',
-  description: 'View the HTTP request headers sent by your browser. Useful for debugging and privacy analysis.',
-  ogUrl:       'https://meuip.me/headers',
-  robots:      'index, follow',
+useSeoPage({
+  title:       'HTTP Headers — View your browser request headers | meuip.me',
+  description: 'Inspect all HTTP request headers sent by your browser to the server. Essential for developers, debugging and privacy analysis.',
+  path:        '/headers',
+  keywords:    'http headers, request headers, browser headers, http request, user-agent header, check headers, http debugging',
+  jsonLd: jsonLdWebPage({
+    name:        'HTTP Headers Viewer',
+    description: 'View all HTTP request headers sent by your browser.',
+    url:         'https://meuip.me/headers',
+    breadcrumbs: [{ name: 'Home', url: 'https://meuip.me' }, { name: 'HTTP Headers', url: 'https://meuip.me/headers' }],
+  }),
 })
 
 const headers = ref<Record<string, string> | null>(null)

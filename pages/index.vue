@@ -46,6 +46,84 @@
     <!-- API CTA -->
     <ApiSection />
 
+    <!-- ═══════════════════════════════════════════════════════════════════
+         SEO CONTENT BLOCK — human-readable, keyword-rich, crawlable
+         Kept visually subtle so it doesn't disrupt the tool UX.
+    ═══════════════════════════════════════════════════════════════════ -->
+    <section class="mt-12 border-t border-slate-800/50 pt-10 space-y-8 text-slate-400 text-sm leading-relaxed">
+
+      <!-- What is an IP address -->
+      <div class="space-y-3">
+        <h2 class="text-base font-semibold text-slate-200">{{ t('seo.whatIsIp.heading') }}</h2>
+        <p>{{ t('seo.whatIsIp.p1') }}</p>
+        <p>{{ t('seo.whatIsIp.p2') }}</p>
+      </div>
+
+      <!-- IPv4 vs IPv6 -->
+      <div class="space-y-3">
+        <h2 class="text-base font-semibold text-slate-200">{{ t('seo.ipv4vsIpv6.heading') }}</h2>
+        <p>{{ t('seo.ipv4vsIpv6.p1') }}</p>
+        <p>{{ t('seo.ipv4vsIpv6.p2') }}</p>
+      </div>
+
+      <!-- Why know your IP -->
+      <div class="space-y-3">
+        <h2 class="text-base font-semibold text-slate-200">{{ t('seo.whyKnow.heading') }}</h2>
+        <p>{{ t('seo.whyKnow.p1') }}</p>
+        <ul class="list-disc list-inside space-y-1 pl-2">
+          <li>{{ t('seo.whyKnow.li1') }}</li>
+          <li>{{ t('seo.whyKnow.li2') }}</li>
+          <li>{{ t('seo.whyKnow.li3') }}</li>
+          <li>{{ t('seo.whyKnow.li4') }}</li>
+        </ul>
+      </div>
+
+      <!-- VPN & Privacy -->
+      <div class="space-y-3">
+        <h2 class="text-base font-semibold text-slate-200">{{ t('seo.vpn.heading') }}</h2>
+        <p>{{ t('seo.vpn.p1') }}</p>
+        <p>{{ t('seo.vpn.p2') }}</p>
+      </div>
+
+      <!-- Internal tool links -->
+      <nav aria-label="Related tools" class="pt-2">
+        <p class="text-slate-500 mb-3 text-xs uppercase tracking-widest font-medium">{{ t('seo.tools.heading') }}</p>
+        <ul class="flex flex-wrap gap-3">
+          <li>
+            <NuxtLink :to="localePath('/what-is-my-ip')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 text-slate-300 hover:text-white transition-colors text-xs">
+              🌐 {{ t('seo.tools.whatIsMyIp') }}
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink :to="localePath('/ipv6-test')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 text-slate-300 hover:text-white transition-colors text-xs">
+              🔢 {{ t('seo.tools.ipv6Test') }}
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink :to="localePath('/dns-leak-test')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 text-slate-300 hover:text-white transition-colors text-xs">
+              🔒 {{ t('seo.tools.dnsLeak') }}
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink :to="localePath('/webrtc-test')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 text-slate-300 hover:text-white transition-colors text-xs">
+              📡 {{ t('seo.tools.webrtc') }}
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink :to="localePath('/browser-info')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 text-slate-300 hover:text-white transition-colors text-xs">
+              💻 {{ t('seo.tools.browser') }}
+            </NuxtLink>
+          </li>
+          <li>
+            <NuxtLink :to="localePath('/headers')" class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-800/60 hover:bg-slate-700/60 text-slate-300 hover:text-white transition-colors text-xs">
+              📋 {{ t('seo.tools.headers') }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </nav>
+
+    </section>
+
   </div>
 </template>
 
@@ -55,36 +133,21 @@ const { data: info, loading, refresh } = useNetworkInfo()
 const { history, add: addHistory, clear: clearHistory } = useIpHistory()
 const localePath = useLocalePath()
 
-// SEO
-useSeoMeta({
-  title:          () => t('meta.home.title'),
-  description:    () => t('meta.home.description'),
-  ogTitle:        () => t('meta.home.title'),
-  ogDescription:  () => t('meta.home.description'),
-  ogUrl:          'https://meuip.me',
-  ogType:         'website',
-  ogImage:        'https://meuip.me/og-image.png',
-  twitterCard:    'summary_large_image',
-  twitterTitle:   () => t('meta.home.title'),
-  twitterDescription: () => t('meta.home.description'),
-  robots:         'index, follow',
-})
-
-useHead({
-  link: [{ rel: 'canonical', href: 'https://meuip.me' }],
-  script: [{
-    type: 'application/ld+json',
-    innerHTML: computed(() => JSON.stringify({
-      '@context': 'https://schema.org',
-      '@type': 'WebApplication',
-      name: 'meuip.me',
-      url: 'https://meuip.me',
-      description: t('meta.home.description'),
-      applicationCategory: 'UtilityApplication',
-      operatingSystem: 'Any',
-      offers: { '@type': 'Offer', price: '0', priceCurrency: 'BRL' },
-    })),
-  }],
+// SEO — uses composable for canonical, hreflang, OG, Twitter, JSON-LD
+useSeoPage({
+  title:       () => t('meta.home.title'),
+  description: () => t('meta.home.description'),
+  path:        '/',
+  keywords:    'qual meu ip, meu ip, descobrir ip, verificar ip, what is my ip, public ip checker, ip address lookup, meu endereço ip, ip público, my public ip',
+  jsonLd: [
+    jsonLdWebSite(),
+    jsonLdWebApplication({
+      name:        'meuip.me — IP Address Lookup',
+      description: computed(() => t('meta.home.description')).value,
+      url:         'https://meuip.me',
+    }),
+    jsonLdOrganization(),
+  ],
 })
 
 // Grid items

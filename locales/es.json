@@ -59,5 +59,39 @@
       "title": "¿Cuál es mi IP? | meuip.me",
       "description": "Descubre tu dirección IP pública, ubicación, proveedor e información de red en tiempo real."
     }
+  },
+  "seo": {
+    "whatIsIp": {
+      "heading": "¿Qué es una dirección IP?",
+      "p1": "Una dirección IP (Internet Protocol) es un identificador numérico único asignado a cada dispositivo conectado a una red. Funciona como la dirección postal de internet, indicando desde dónde se envían y reciben los paquetes de datos.",
+      "p2": "Existen dos tipos: una IP privada usada dentro de tu red local (como el Wi-Fi de casa), y una IP pública, la dirección que el resto de internet ve. Esta herramienta detecta y muestra tu IP pública en tiempo real."
+    },
+    "ipv4vsIpv6": {
+      "heading": "IPv4 vs IPv6 — ¿cuál es la diferencia?",
+      "p1": "IPv4 utiliza direcciones de 32 bits con el formato \"203.0.113.1\", soportando alrededor de 4.000 millones de direcciones únicas. Como ese espacio se ha agotado, IPv6 fue introducido con direcciones de 128 bits, permitiendo una cantidad virtualmente ilimitada de dispositivos conectados.",
+      "p2": "La mayoría de los ISP modernos ofrecen conectividad dual-stack: tienes tanto una dirección IPv4 como una IPv6. Usa nuestra herramienta de prueba IPv6 para verificar si tu conexión soporta el protocolo más reciente."
+    },
+    "whyKnow": {
+      "heading": "¿Para qué sirve conocer tu IP?",
+      "p1": "Conocer tu dirección IP pública tiene muchos usos prácticos:",
+      "li1": "Configurar acceso remoto (VPN, SSH, cámaras IP) con tu IP de origen",
+      "li2": "Verificar que tu VPN está activa y enmascarando correctamente tu IP real",
+      "li3": "Diagnosticar problemas de conexión al contactar el soporte de tu proveedor",
+      "li4": "Entender la ubicación geográfica que perciben los sitios web sobre ti"
+    },
+    "vpn": {
+      "heading": "VPN, privacidad y anonimato en línea",
+      "p1": "Una VPN (Red Privada Virtual) reemplaza tu IP pública por la del servidor VPN, ocultando tu ubicación real de sitios web y servicios. Al conectarte a una VPN, este sitio debería mostrar la IP del servidor VPN en lugar de tu IP doméstica.",
+      "p2": "Sin embargo, ojo: más allá de la IP, otros vectores pueden exponer tu identidad, como las filtraciones de DNS y WebRTC. Usa nuestras herramientas de prueba de DNS Leak y WebRTC Leak para asegurarte de que tu VPN te protege de extremo a extremo."
+    },
+    "tools": {
+      "heading": "Herramientas relacionadas",
+      "whatIsMyIp": "¿Cuál es mi IP?",
+      "ipv6Test": "Prueba IPv6",
+      "dnsLeak": "Prueba de DNS Leak",
+      "webrtc": "Prueba WebRTC",
+      "browser": "Info del Navegador",
+      "headers": "Cabeceras HTTP"
+    }
   }
 }
