@@ -19,10 +19,26 @@
   },
   "nav": {
     "home": "首页",
-    "browser": "浏览器"
+    "browser": "浏览器",
+    "ipv6": "IPv6测试",
+    "dnsLeak": "DNS泄露",
+    "webrtc": "WebRTC",
+    "headers": "HTTP标头",
+    "whatIsMyIp": "我的IP是什么？"
   },
   "footer": {
-    "rights": "保留所有权利"
+    "rights": "保留所有权利",
+    "toolsLabel": "工具",
+    "tools": {
+      "home": "首页",
+      "whatIsMyIp": "我的IP是什么？",
+      "ipv6Test": "IPv6测试",
+      "dnsLeak": "DNS泄露测试",
+      "webrtc": "WebRTC测试",
+      "browser": "浏览器信息",
+      "headers": "HTTP标头"
+    },
+    "tagline": "快速。准确。免费。"
   },
   "ip": {
     "yourIp": "您的IP地址",
@@ -58,6 +74,121 @@
     "home": {
       "title": "我的IP是什么？| meuip.me",
       "description": "实时获取您的公共IP地址、位置、ISP和网络信息。快速、准确、免费。"
+    }
+  },
+  "whatIsMyIp": {
+    "title": "我的IP是什么？",
+    "subtitle": "您的公共IP地址是您的ISP（网络提供商）分配给您互联网连接的唯一标识符。",
+    "yourPublicIp": "您的公共IP",
+    "whatIsIp": {
+      "heading": "什么是IP地址？",
+      "p": "IP地址（互联网协议地址）是分配给每个联网设备的数字标签。它有两个主要功能：标识主机或网络接口，以及提供位置寻址。"
+    },
+    "ipv4vsIpv6": {
+      "heading": "IPv4 与 IPv6",
+      "p": "IPv4使用32位地址（如203.0.113.1），而IPv6使用128位地址（如2001:db8::1）。IPv6的创建是为了解决IPv4地址耗尽的问题。"
+    },
+    "whyChange": {
+      "heading": "为什么我的IP会变？",
+      "p": "大多数家庭ISP分配的是动态IP，会定期更换。静态IP是固定的，通常需要企业套餐。"
+    }
+  },
+  "ipCard": {
+    "vpnDetected": "⚠ 检测到VPN/代理",
+    "residential": "✓ 家庭IP"
+  },
+  "dnsLeak": {
+    "title": "DNS泄露测试",
+    "subtitle": "验证您的DNS查询是否在VPN或安全连接之外泄露。",
+    "startTest": "开始DNS泄露测试",
+    "testing": "测试中...",
+    "runAgain": "再次测试 →",
+    "dnsServersDetected": "检测到的DNS服务器",
+    "noLeak": {
+      "status": "未发现DNS泄露",
+      "description": "您的连接似乎是安全的。"
+    },
+    "leaked": {
+      "status": "检测到DNS泄露",
+      "description": "您的DNS请求正在泄露。"
+    },
+    "explainer": {
+      "heading": "什么是DNS泄露？",
+      "p": "DNS泄露是指您的DNS查询被发送到加密隧道（VPN）之外，将您的浏览活动暴露给ISP或第三方。"
+    },
+    "meta": {
+      "title": "DNS泄露测试 — 检查您的VPN是否泄露DNS | meuip.me",
+      "description": "运行免费的DNS泄露测试，验证您的VPN是否正在保护您的DNS查询。在几秒钟内检测暴露的DNS服务器。"
+    }
+  },
+  "ipv6Test": {
+    "title": "IPv6测试",
+    "subtitle": "检查您的连接是否支持IPv6，并查看您的IPv6地址。",
+    "ipv4Address": "IPv4地址",
+    "ipv6Address": "IPv6地址",
+    "explainer": {
+      "heading": "什么是IPv6？",
+      "p1": "IPv6（互联网协议第6版）是互联网协议的最新版本，旨在解决IPv4地址耗尽的问题。它使用128位地址，可以支持340万亿亿亿个唯一地址。",
+      "p2": "大多数现代网络支持双栈（IPv4和IPv6）。如果您的ISP尚未启用IPv6，您将只看到上面的IPv4地址。"
+    },
+    "meta": {
+      "title": "IPv6测试 — 检查您的IPv6连接 | meuip.me",
+      "description": "测试您的互联网连接是否支持IPv6。立即找到您的IPv4和IPv6地址。"
+    }
+  },
+  "browserInfo": {
+    "title": "浏览器信息",
+    "subtitle": "关于您的浏览器、操作系统和设备的详细信息。",
+    "rawUserAgent": "原始User-Agent",
+    "labels": {
+      "browser": "浏览器",
+      "os": "操作系统",
+      "language": "语言",
+      "screen": "屏幕分辨率",
+      "colorDepth": "色彩深度",
+      "timezone": "时区",
+      "connection": "连接类型",
+      "cookies": "Cookie",
+      "doNotTrack": "请勿跟踪"
+    },
+    "cookies": { "enabled": "已启用", "disabled": "已禁用" },
+    "doNotTrack": { "enabled": "已启用", "notSet": "未设置" },
+    "meta": {
+      "title": "浏览器信息 — 检测您的浏览器、操作系统和设备 | meuip.me",
+      "description": "检测您的浏览器、操作系统、语言、屏幕分辨率和设备能力。免费浏览器指纹工具。"
+    }
+  },
+  "httpHeaders": {
+    "title": "HTTP标头",
+    "subtitle": "您的浏览器发送到本服务器的HTTP请求标头。",
+    "meta": {
+      "title": "HTTP标头 — 查看您的浏览器请求标头 | meuip.me",
+      "description": "检查您的浏览器发送到服务器的所有HTTP请求标头。对开发人员、调试和隐私分析至关重要。"
+    }
+  },
+  "webrtc": {
+    "title": "WebRTC泄露测试",
+    "subtitle": "检测WebRTC是否正在暴露您的真实IP地址，即使在使用VPN时也是如此。",
+    "runTest": "运行WebRTC测试",
+    "runAgain": "再次运行 →",
+    "noLeak": {
+      "status": "没有WebRTC泄露",
+      "description": "您的IP已正确隐藏。"
+    },
+    "leaked": {
+      "status": "检测到WebRTC泄露",
+      "description": "您的真实IP可能已暴露。"
+    },
+    "localIps": "本地IP（通过WebRTC）",
+    "publicIps": "公共IP（通过WebRTC）",
+    "explainer": {
+      "heading": "什么是WebRTC泄露？",
+      "p1": "WebRTC是浏览器的实时通信功能。即使在使用VPN时，它也可能在您不知情的情况下向网站暴露您的本地和公共IP地址。",
+      "p2": "要防止WebRTC泄露，您可以在浏览器设置中禁用WebRTC或使用浏览器扩展。"
+    },
+    "meta": {
+      "title": "WebRTC泄露测试 — 检查WebRTC是否暴露您的真实IP | meuip.me",
+      "description": "检测浏览器中的WebRTC IP泄露。检查即使使用VPN，您的真实IP地址是否仍被网站获取。"
     }
   },
   "seo": {

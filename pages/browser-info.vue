@@ -1,8 +1,8 @@
 <template>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12 space-y-8">
     <div class="animate-fade-in">
-      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">Browser Information</h1>
-      <p class="text-slate-400">Detailed information about your browser, operating system and device.</p>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">{{ t('browserInfo.title') }}</h1>
+      <p class="text-slate-400">{{ t('browserInfo.subtitle') }}</p>
     </div>
 
     <div v-if="!info" class="space-y-3">
@@ -21,16 +21,18 @@
 
     <!-- Raw User-Agent -->
     <div v-if="info?.userAgent" class="glass-card p-5 animate-fade-in">
-      <p class="text-xs text-slate-500 uppercase tracking-wider font-medium mb-2">Raw User-Agent</p>
+      <p class="text-xs text-slate-500 uppercase tracking-wider font-medium mb-2">{{ t('browserInfo.rawUserAgent') }}</p>
       <p class="text-sm font-mono text-slate-300 break-all">{{ info.userAgent }}</p>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoPage({
-  title:       'Browser Information — Detect your browser, OS & device | meuip.me',
-  description: 'Detect your browser, operating system, language, screen resolution and device capabilities. Free browser fingerprint tool.',
+  title:       () => t('browserInfo.meta.title'),
+  description: () => t('browserInfo.meta.description'),
   path:        '/browser-info',
   keywords:    'browser information, browser fingerprint, detect browser, browser details, os detection, user agent, screen resolution',
   jsonLd: jsonLdWebPage({
@@ -44,15 +46,15 @@ useSeoPage({
 const info = ref<any>(null)
 
 const items = computed(() => info.value ? [
-  { icon: '🌐', label: 'Browser',          value: info.value.browser },
-  { icon: '💻', label: 'Operating System', value: info.value.os },
-  { icon: '🗣', label: 'Language',         value: info.value.language },
-  { icon: '📐', label: 'Screen',           value: `${screen.width}×${screen.height}` },
-  { icon: '🎨', label: 'Color Depth',      value: `${screen.colorDepth}-bit` },
-  { icon: '🕐', label: 'Timezone',         value: Intl.DateTimeFormat().resolvedOptions().timeZone },
-  { icon: '🔌', label: 'Connection',       value: (navigator as any).connection?.effectiveType || 'Unknown' },
-  { icon: '🍪', label: 'Cookies',          value: navigator.cookieEnabled ? 'Enabled' : 'Disabled' },
-  { icon: '🔒', label: 'Do Not Track',     value: navigator.doNotTrack === '1' ? 'Enabled' : 'Not set' },
+  { icon: '🌐', label: t('browserInfo.labels.browser'),    value: info.value.browser },
+  { icon: '💻', label: t('browserInfo.labels.os'),         value: info.value.os },
+  { icon: '🗣', label: t('browserInfo.labels.language'),   value: info.value.language },
+  { icon: '📐', label: t('browserInfo.labels.screen'),     value: `${screen.width}×${screen.height}` },
+  { icon: '🎨', label: t('browserInfo.labels.colorDepth'), value: `${screen.colorDepth}-bit` },
+  { icon: '🕐', label: t('browserInfo.labels.timezone'),   value: Intl.DateTimeFormat().resolvedOptions().timeZone },
+  { icon: '🔌', label: t('browserInfo.labels.connection'), value: (navigator as any).connection?.effectiveType || t('home.notAvailable') },
+  { icon: '🍪', label: t('browserInfo.labels.cookies'),    value: navigator.cookieEnabled ? t('browserInfo.cookies.enabled') : t('browserInfo.cookies.disabled') },
+  { icon: '🔒', label: t('browserInfo.labels.doNotTrack'), value: navigator.doNotTrack === '1' ? t('browserInfo.doNotTrack.enabled') : t('browserInfo.doNotTrack.notSet') },
 ] : [])
 
 onMounted(async () => {

@@ -19,10 +19,26 @@
   },
   "nav": {
     "home": "Inicio",
-    "browser": "Navegador"
+    "browser": "Navegador",
+    "ipv6": "Prueba IPv6",
+    "dnsLeak": "DNS Leak",
+    "webrtc": "WebRTC",
+    "headers": "Headers",
+    "whatIsMyIp": "¿Cuál es mi IP?"
   },
   "footer": {
-    "rights": "Todos los derechos reservados"
+    "rights": "Todos los derechos reservados",
+    "toolsLabel": "Herramientas",
+    "tools": {
+      "home": "Inicio",
+      "whatIsMyIp": "¿Cuál es mi IP?",
+      "ipv6Test": "Prueba IPv6",
+      "dnsLeak": "Prueba DNS Leak",
+      "webrtc": "Prueba WebRTC",
+      "browser": "Info del Navegador",
+      "headers": "Cabeceras HTTP"
+    },
+    "tagline": "Rápido. Preciso. Gratuito."
   },
   "ip": {
     "yourIp": "Tu dirección IP",
@@ -58,6 +74,121 @@
     "home": {
       "title": "¿Cuál es mi IP? | meuip.me",
       "description": "Descubre tu dirección IP pública, ubicación, proveedor e información de red en tiempo real."
+    }
+  },
+  "whatIsMyIp": {
+    "title": "¿Cuál es mi IP?",
+    "subtitle": "Tu dirección IP pública es el identificador único asignado a tu conexión de internet por tu proveedor (ISP).",
+    "yourPublicIp": "Tu IP pública",
+    "whatIsIp": {
+      "heading": "¿Qué es una dirección IP?",
+      "p": "Una dirección IP (Internet Protocol) es una etiqueta numérica asignada a cada dispositivo conectado a una red. Cumple dos funciones principales: identificar el host o la interfaz de red y proporcionar la dirección de ubicación."
+    },
+    "ipv4vsIpv6": {
+      "heading": "IPv4 vs IPv6",
+      "p": "IPv4 usa direcciones de 32 bits (ej.: 203.0.113.1), mientras que IPv6 usa direcciones de 128 bits (ej.: 2001:db8::1). IPv6 fue creado para resolver el agotamiento de las direcciones IPv4."
+    },
+    "whyChange": {
+      "heading": "¿Por qué cambia mi IP?",
+      "p": "La mayoría de los ISP residenciales asignan IPs dinámicas que cambian periódicamente. Las IPs estáticas son fijas y generalmente requieren un plan empresarial."
+    }
+  },
+  "ipCard": {
+    "vpnDetected": "⚠ VPN/Proxy detectado",
+    "residential": "✓ IP residencial"
+  },
+  "dnsLeak": {
+    "title": "Prueba de DNS Leak",
+    "subtitle": "Verifica que tus consultas DNS no estén filtrándose fuera de tu VPN o conexión segura.",
+    "startTest": "Iniciar prueba de DNS Leak",
+    "testing": "Probando...",
+    "runAgain": "Ejecutar de nuevo →",
+    "dnsServersDetected": "Servidores DNS detectados",
+    "noLeak": {
+      "status": "No se encontraron DNS Leaks",
+      "description": "Tu conexión parece segura."
+    },
+    "leaked": {
+      "status": "DNS Leak detectado",
+      "description": "Tus peticiones DNS están filtrándose."
+    },
+    "explainer": {
+      "heading": "¿Qué es un DNS leak?",
+      "p": "Un DNS leak ocurre cuando tus consultas DNS se envían fuera de tu túnel cifrado (VPN), exponiendo tu actividad de navegación a tu proveedor o a terceros."
+    },
+    "meta": {
+      "title": "Prueba de DNS Leak — Comprueba si tu VPN filtra DNS | meuip.me",
+      "description": "Realiza una prueba gratuita de DNS leak para verificar que tu VPN protege tus consultas DNS. Detecta servidores DNS expuestos en segundos."
+    }
+  },
+  "ipv6Test": {
+    "title": "Prueba de IPv6",
+    "subtitle": "Comprueba si tu conexión soporta IPv6 y ve tu dirección IPv6.",
+    "ipv4Address": "Dirección IPv4",
+    "ipv6Address": "Dirección IPv6",
+    "explainer": {
+      "heading": "¿Qué es IPv6?",
+      "p1": "IPv6 (Internet Protocol versión 6) es la última versión del Protocolo de Internet, diseñada para resolver el agotamiento de las direcciones IPv4. Usa direcciones de 128 bits, permitiendo 340 undecillones de direcciones únicas.",
+      "p2": "La mayoría de las redes modernas admiten dual-stack (IPv4 e IPv6). Si tu ISP no ha habilitado IPv6, solo verás tu dirección IPv4 arriba."
+    },
+    "meta": {
+      "title": "Prueba IPv6 — Verifica tu conectividad IPv6 | meuip.me",
+      "description": "Prueba si tu conexión a internet soporta IPv6. Encuentra tus direcciones IPv4 e IPv6 al instante."
+    }
+  },
+  "browserInfo": {
+    "title": "Información del Navegador",
+    "subtitle": "Información detallada sobre tu navegador, sistema operativo y dispositivo.",
+    "rawUserAgent": "User-Agent sin procesar",
+    "labels": {
+      "browser": "Navegador",
+      "os": "Sistema operativo",
+      "language": "Idioma",
+      "screen": "Pantalla",
+      "colorDepth": "Profundidad de color",
+      "timezone": "Zona horaria",
+      "connection": "Conexión",
+      "cookies": "Cookies",
+      "doNotTrack": "No Rastrear"
+    },
+    "cookies": { "enabled": "Habilitado", "disabled": "Deshabilitado" },
+    "doNotTrack": { "enabled": "Habilitado", "notSet": "No definido" },
+    "meta": {
+      "title": "Información del Navegador — Detecta tu navegador, SO y dispositivo | meuip.me",
+      "description": "Detecta tu navegador, sistema operativo, idioma, resolución de pantalla y capacidades del dispositivo. Herramienta gratuita de fingerprint."
+    }
+  },
+  "httpHeaders": {
+    "title": "Cabeceras HTTP",
+    "subtitle": "Las cabeceras HTTP enviadas por tu navegador a este servidor.",
+    "meta": {
+      "title": "Cabeceras HTTP — Ve las cabeceras de tu navegador | meuip.me",
+      "description": "Inspecciona todas las cabeceras de petición HTTP enviadas por tu navegador. Esencial para desarrolladores, depuración y análisis de privacidad."
+    }
+  },
+  "webrtc": {
+    "title": "Prueba de WebRTC Leak",
+    "subtitle": "Detecta si WebRTC está exponiendo tu dirección IP real, incluso usando una VPN.",
+    "runTest": "Ejecutar prueba WebRTC",
+    "runAgain": "Ejecutar de nuevo →",
+    "noLeak": {
+      "status": "Sin WebRTC Leak",
+      "description": "Tu IP está correctamente oculta."
+    },
+    "leaked": {
+      "status": "WebRTC Leak detectado",
+      "description": "Tu IP real podría estar expuesta."
+    },
+    "localIps": "IPs locales (vía WebRTC)",
+    "publicIps": "IPs públicas (vía WebRTC)",
+    "explainer": {
+      "heading": "¿Qué es un WebRTC leak?",
+      "p1": "WebRTC es una función del navegador para comunicación en tiempo real. Puede exponer tus direcciones IP locales y públicas a sitios web sin tu conocimiento, incluso cuando usas una VPN.",
+      "p2": "Para evitar fugas de WebRTC, puedes desactivar WebRTC en la configuración del navegador o usar una extensión."
+    },
+    "meta": {
+      "title": "Prueba de WebRTC Leak — Comprueba si WebRTC expone tu IP | meuip.me",
+      "description": "Detecta fugas de IP vía WebRTC en tu navegador. Comprueba si tu IP real está siendo expuesta a sitios web incluso usando una VPN."
     }
   },
   "seo": {

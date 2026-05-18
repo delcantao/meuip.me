@@ -36,10 +36,10 @@ const localePath = useLocalePath()
 
 const navLinks = computed(() => [
   { to: '/',              label: t('nav.home') },
-  { to: '/ipv6-test',     label: 'IPv6' },
+  { to: '/ipv6-test',     label: t('nav.ipv6') },
   { to: '/browser-info',  label: t('nav.browser') },
-  { to: '/headers',       label: 'Headers' },
-  { to: '/dns-leak-test', label: 'DNS Leak' },
-  { to: '/webrtc-test',   label: 'WebRTC' },
+  { to: '/headers',       label: t('nav.headers') },
+  { to: '/dns-leak-test', label: t('nav.dnsLeak') },
+  { to: '/webrtc-test',   label: t('nav.webrtc') },
 ])
 </script>

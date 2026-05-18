@@ -19,10 +19,26 @@
   },
   "nav": {
     "home": "Home",
-    "browser": "Browser"
+    "browser": "Browser",
+    "ipv6": "IPv6 Test",
+    "dnsLeak": "DNS Leak",
+    "webrtc": "WebRTC",
+    "headers": "Headers",
+    "whatIsMyIp": "What is my IP?"
   },
   "footer": {
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "toolsLabel": "Tools",
+    "tools": {
+      "home": "Home",
+      "whatIsMyIp": "What is my IP?",
+      "ipv6Test": "IPv6 Test",
+      "dnsLeak": "DNS Leak Test",
+      "webrtc": "WebRTC Test",
+      "browser": "Browser Info",
+      "headers": "HTTP Headers"
+    },
+    "tagline": "Fast. Accurate. Free."
   },
   "ip": {
     "yourIp": "Your IP address",
@@ -58,6 +74,121 @@
     "home": {
       "title": "What is my IP? | meuip.me",
       "description": "Find your public IP address, location, ISP and network details in real time. Fast, accurate and free."
+    }
+  },
+  "whatIsMyIp": {
+    "title": "What is my IP?",
+    "subtitle": "Your public IP address is the unique identifier assigned to your internet connection by your ISP.",
+    "yourPublicIp": "Your public IP",
+    "whatIsIp": {
+      "heading": "What is an IP address?",
+      "p": "An IP address (Internet Protocol address) is a numerical label assigned to each device connected to a computer network. It serves two main functions: host or network interface identification and location addressing."
+    },
+    "ipv4vsIpv6": {
+      "heading": "IPv4 vs IPv6",
+      "p": "IPv4 uses 32-bit addresses (e.g. 203.0.113.1), while IPv6 uses 128-bit addresses (e.g. 2001:db8::1). IPv6 was created to address the exhaustion of IPv4 addresses."
+    },
+    "whyChange": {
+      "heading": "Why does my IP change?",
+      "p": "Most residential ISPs assign dynamic IPs that change periodically. Static IPs are fixed and usually require a business plan."
+    }
+  },
+  "ipCard": {
+    "vpnDetected": "⚠ VPN/Proxy detected",
+    "residential": "✓ Residential IP"
+  },
+  "dnsLeak": {
+    "title": "DNS Leak Test",
+    "subtitle": "Verify that your DNS queries are not leaking outside your VPN or secure connection.",
+    "startTest": "Start DNS Leak Test",
+    "testing": "Testing...",
+    "runAgain": "Run test again →",
+    "dnsServersDetected": "DNS Servers detected",
+    "noLeak": {
+      "status": "No DNS Leaks Found",
+      "description": "Your connection appears secure."
+    },
+    "leaked": {
+      "status": "DNS Leak Detected",
+      "description": "Your DNS requests are leaking."
+    },
+    "explainer": {
+      "heading": "What is a DNS leak?",
+      "p": "A DNS leak occurs when your DNS queries are sent outside your encrypted tunnel (VPN), exposing your browsing activity to your ISP or third parties."
+    },
+    "meta": {
+      "title": "DNS Leak Test — Check if your VPN is leaking DNS | meuip.me",
+      "description": "Run a free DNS leak test to verify your VPN is protecting your DNS queries. Detect exposed DNS servers in seconds."
+    }
+  },
+  "ipv6Test": {
+    "title": "IPv6 Test",
+    "subtitle": "Check if your connection supports IPv6 and see your IPv6 address.",
+    "ipv4Address": "IPv4 Address",
+    "ipv6Address": "IPv6 Address",
+    "explainer": {
+      "heading": "What is IPv6?",
+      "p1": "IPv6 (Internet Protocol version 6) is the latest version of the Internet Protocol, designed to address the exhaustion of IPv4 addresses. It uses 128-bit addresses, allowing for 340 undecillion unique addresses.",
+      "p2": "Most modern networks support dual-stack (both IPv4 and IPv6). If your ISP hasn't enabled IPv6, you'll only see your IPv4 address above."
+    },
+    "meta": {
+      "title": "IPv6 Test — Check your IPv6 connectivity | meuip.me",
+      "description": "Test if your internet connection supports IPv6. Find your IPv4 and IPv6 addresses instantly."
+    }
+  },
+  "browserInfo": {
+    "title": "Browser Information",
+    "subtitle": "Detailed information about your browser, operating system and device.",
+    "rawUserAgent": "Raw User-Agent",
+    "labels": {
+      "browser": "Browser",
+      "os": "Operating System",
+      "language": "Language",
+      "screen": "Screen",
+      "colorDepth": "Color Depth",
+      "timezone": "Timezone",
+      "connection": "Connection",
+      "cookies": "Cookies",
+      "doNotTrack": "Do Not Track"
+    },
+    "cookies": { "enabled": "Enabled", "disabled": "Disabled" },
+    "doNotTrack": { "enabled": "Enabled", "notSet": "Not set" },
+    "meta": {
+      "title": "Browser Information — Detect your browser, OS & device | meuip.me",
+      "description": "Detect your browser, operating system, language, screen resolution and device capabilities. Free browser fingerprint tool."
+    }
+  },
+  "httpHeaders": {
+    "title": "HTTP Headers",
+    "subtitle": "The HTTP headers sent by your browser to this server.",
+    "meta": {
+      "title": "HTTP Headers — View your browser request headers | meuip.me",
+      "description": "Inspect all HTTP request headers sent by your browser to the server. Essential for developers, debugging and privacy analysis."
+    }
+  },
+  "webrtc": {
+    "title": "WebRTC Leak Test",
+    "subtitle": "Detect if WebRTC is exposing your real IP address, even when using a VPN.",
+    "runTest": "Run WebRTC Test",
+    "runAgain": "Run again →",
+    "noLeak": {
+      "status": "No WebRTC Leak",
+      "description": "Your IP is properly hidden."
+    },
+    "leaked": {
+      "status": "WebRTC Leak Detected",
+      "description": "Your real IP may be exposed."
+    },
+    "localIps": "Local IPs (via WebRTC)",
+    "publicIps": "Public IPs (via WebRTC)",
+    "explainer": {
+      "heading": "What is a WebRTC leak?",
+      "p1": "WebRTC is a browser feature for real-time communication. It can expose your local and public IP addresses to websites without your knowledge, even when you're using a VPN.",
+      "p2": "To prevent WebRTC leaks, you can disable WebRTC in your browser settings or use a browser extension."
+    },
+    "meta": {
+      "title": "WebRTC Leak Test — Check if WebRTC exposes your real IP | meuip.me",
+      "description": "Detect WebRTC IP leaks in your browser. Check if your real IP address is being exposed to websites even while using a VPN."
     }
   },
   "seo": {

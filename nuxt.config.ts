@@ -17,9 +17,10 @@ export default defineNuxtConfig({
     baseUrl: SITE_URL,
     locales: [
       { code: 'pt', language: 'pt-BR', name: 'Português', file: 'pt.json' },
-      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
-      { code: 'es', language: 'es-ES', name: 'Español', file: 'es.json' },
-      { code: 'zh', language: 'zh-CN', name: '中文', file: 'zh.json' },
+      { code: 'en', language: 'en-US', name: 'English',   file: 'en.json' },
+      { code: 'es', language: 'es-ES', name: 'Español',   file: 'es.json' },
+      { code: 'zh', language: 'zh-CN', name: '中文',       file: 'zh.json' },
+      { code: 'de', language: 'de-DE', name: 'Deutsch',   file: 'de.json' },
     ],
     lazy: true,
     langDir: '../locales',

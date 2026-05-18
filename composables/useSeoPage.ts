@@ -39,6 +39,7 @@ const HREFLANG: Record<string, string> = {
   'en':    '/en',
   'es':    '/es',
   'zh-CN': '/zh',
+  'de-DE': '/de',
 }
 
 export function useSeoPage(opts: SeoPageOptions) {

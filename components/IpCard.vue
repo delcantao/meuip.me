@@ -22,7 +22,7 @@
         {{ ipVersion }}
       </span>
       <span v-if="vpnStatus !== null" :class="vpnStatus ? 'badge bg-yellow-500/10 text-yellow-400 border border-yellow-500/20' : 'badge bg-emerald-500/10 text-emerald-400 border border-emerald-500/20'">
-        {{ vpnStatus ? '⚠ VPN/Proxy detectado' : '✓ IP residencial' }}
+        {{ vpnStatus ? t('ipCard.vpnDetected') : t('ipCard.residential') }}
       </span>
     </div>
 

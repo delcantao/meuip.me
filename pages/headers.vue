@@ -1,8 +1,8 @@
 <template>
   <div class="max-w-3xl mx-auto px-4 sm:px-6 py-12 space-y-8">
     <div class="animate-fade-in">
-      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">HTTP Headers</h1>
-      <p class="text-slate-400">The HTTP headers sent by your browser to this server.</p>
+      <h1 class="text-3xl sm:text-4xl font-bold text-white mb-3">{{ t('httpHeaders.title') }}</h1>
+      <p class="text-slate-400">{{ t('httpHeaders.subtitle') }}</p>
     </div>
 
     <div class="glass-card overflow-hidden animate-slide-up">
@@ -24,9 +24,11 @@
 </template>
 
 <script setup lang="ts">
+const { t } = useI18n()
+
 useSeoPage({
-  title:       'HTTP Headers — View your browser request headers | meuip.me',
-  description: 'Inspect all HTTP request headers sent by your browser to the server. Essential for developers, debugging and privacy analysis.',
+  title:       () => t('httpHeaders.meta.title'),
+  description: () => t('httpHeaders.meta.description'),
   path:        '/headers',
   keywords:    'http headers, request headers, browser headers, http request, user-agent header, check headers, http debugging',
   jsonLd: jsonLdWebPage({

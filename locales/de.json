@@ -1,0 +1,228 @@
+{
+  "theme": {
+    "light": "Hell",
+    "dark": "Dunkel",
+    "system": "System"
+  },
+  "api": {
+    "title": "Unsere API nutzen",
+    "subtitle": "In Sekunden integrieren. Ohne Authentifizierung, ohne Limits, vollständig kostenlos.",
+    "latency": "< 50ms Latenz",
+    "noAuth": "Keine Authentifizierung",
+    "free": "100% kostenlos",
+    "simple": "Einfach & dokumentiert",
+    "endpoint": "Endpunkt",
+    "copyEndpoint": "Endpunkt kopieren",
+    "docs": "API-Dokumentation",
+    "plainResponse": "Antwort als Klartext",
+    "jsonResponse": "Antwort als JSON"
+  },
+  "nav": {
+    "home": "Startseite",
+    "browser": "Browser",
+    "ipv6": "IPv6-Test",
+    "dnsLeak": "DNS-Leck",
+    "webrtc": "WebRTC",
+    "headers": "Headers",
+    "whatIsMyIp": "Was ist meine IP?"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten",
+    "toolsLabel": "Werkzeuge",
+    "tools": {
+      "home": "Startseite",
+      "whatIsMyIp": "Was ist meine IP?",
+      "ipv6Test": "IPv6-Test",
+      "dnsLeak": "DNS-Leck-Test",
+      "webrtc": "WebRTC-Test",
+      "browser": "Browser-Info",
+      "headers": "HTTP-Header"
+    },
+    "tagline": "Schnell. Genau. Kostenlos."
+  },
+  "ip": {
+    "yourIp": "Deine IP-Adresse",
+    "share": "Teilen",
+    "copied": "Kopiert!"
+  },
+  "copy": {
+    "copy": "Kopieren",
+    "copied": "Kopiert!"
+  },
+  "home": {
+    "title": "Was ist meine IP?",
+    "subtitle": "Entdecke deine öffentliche IP, deinen Standort und Netzwerkinformationen in Echtzeit.",
+    "country": "Land",
+    "city": "Stadt",
+    "isp": "Anbieter (ISP)",
+    "asn": "ASN",
+    "timezone": "Zeitzone",
+    "os": "Betriebssystem",
+    "browser": "Browser",
+    "ipv6": "IPv6",
+    "available": "Verfügbar",
+    "unavailable": "Nicht verfügbar",
+    "ipv6Active": "✓ IPv6 aktiv",
+    "ipv6Unavailable": "✗ IPv6 nicht verfügbar",
+    "connected": "✓ Verbunden",
+    "notAvailable": "Nicht verfügbar",
+    "language": "Sprache",
+    "history": "IP-Verlauf",
+    "clearHistory": "Verlauf löschen"
+  },
+  "meta": {
+    "home": {
+      "title": "Was ist meine IP? | meuip.me",
+      "description": "Finde deine öffentliche IP-Adresse, Standort, ISP und Netzwerkdetails in Echtzeit. Schnell, genau und kostenlos."
+    }
+  },
+  "ipCard": {
+    "vpnDetected": "⚠ VPN/Proxy erkannt",
+    "residential": "✓ Private IP-Adresse"
+  },
+  "whatIsMyIp": {
+    "title": "Was ist meine IP?",
+    "subtitle": "Deine öffentliche IP-Adresse ist der eindeutige Bezeichner, der deiner Internetverbindung von deinem ISP zugewiesen wird.",
+    "yourPublicIp": "Deine öffentliche IP",
+    "whatIsIp": {
+      "heading": "Was ist eine IP-Adresse?",
+      "p": "Eine IP-Adresse (Internet-Protokoll-Adresse) ist eine numerische Bezeichnung, die jedem Gerät in einem Computernetzwerk zugewiesen wird. Sie erfüllt zwei Hauptfunktionen: die Identifikation des Hosts oder der Netzwerkschnittstelle und die Standortadressierung."
+    },
+    "ipv4vsIpv6": {
+      "heading": "IPv4 vs IPv6",
+      "p": "IPv4 verwendet 32-Bit-Adressen (z.B. 203.0.113.1), während IPv6 128-Bit-Adressen verwendet (z.B. 2001:db8::1). IPv6 wurde entwickelt, um die Erschöpfung von IPv4-Adressen zu beheben."
+    },
+    "whyChange": {
+      "heading": "Warum ändert sich meine IP?",
+      "p": "Die meisten privaten ISPs vergeben dynamische IPs, die sich periodisch ändern. Statische IPs sind fest und erfordern in der Regel einen Geschäftsplan."
+    }
+  },
+  "dnsLeak": {
+    "title": "DNS-Leck-Test",
+    "subtitle": "Überprüfe, ob deine DNS-Anfragen außerhalb deines VPN oder deiner sicheren Verbindung weitergeleitet werden.",
+    "startTest": "DNS-Leck-Test starten",
+    "testing": "Wird getestet...",
+    "runAgain": "Test wiederholen →",
+    "dnsServersDetected": "Erkannte DNS-Server",
+    "noLeak": {
+      "status": "Keine DNS-Lecks gefunden",
+      "description": "Deine Verbindung scheint sicher zu sein."
+    },
+    "leaked": {
+      "status": "DNS-Leck erkannt",
+      "description": "Deine DNS-Anfragen werden weitergeleitet."
+    },
+    "explainer": {
+      "heading": "Was ist ein DNS-Leck?",
+      "p": "Ein DNS-Leck tritt auf, wenn deine DNS-Anfragen außerhalb deines verschlüsselten Tunnels (VPN) gesendet werden und so deine Surfaktivitäten gegenüber deinem ISP oder Dritten offengelegt werden."
+    },
+    "meta": {
+      "title": "DNS-Leck-Test — Prüfe ob dein VPN DNS leck hat | meuip.me",
+      "description": "Führe einen kostenlosen DNS-Leck-Test durch, um zu überprüfen, ob dein VPN deine DNS-Anfragen schützt. Erkenne exponierte DNS-Server in Sekunden."
+    }
+  },
+  "ipv6Test": {
+    "title": "IPv6-Test",
+    "subtitle": "Prüfe, ob deine Verbindung IPv6 unterstützt, und sieh deine IPv6-Adresse.",
+    "ipv4Address": "IPv4-Adresse",
+    "ipv6Address": "IPv6-Adresse",
+    "explainer": {
+      "heading": "Was ist IPv6?",
+      "p1": "IPv6 (Internet Protocol Version 6) ist die neueste Version des Internetprotokolls, das entwickelt wurde, um die Erschöpfung von IPv4-Adressen zu beheben. Es verwendet 128-Bit-Adressen, was 340 Undezillionen eindeutige Adressen ermöglicht.",
+      "p2": "Die meisten modernen Netzwerke unterstützen Dual-Stack (sowohl IPv4 als auch IPv6). Wenn dein ISP IPv6 noch nicht aktiviert hat, siehst du oben nur deine IPv4-Adresse."
+    },
+    "meta": {
+      "title": "IPv6-Test — Prüfe deine IPv6-Konnektivität | meuip.me",
+      "description": "Teste, ob deine Internetverbindung IPv6 unterstützt. Finde sofort deine IPv4- und IPv6-Adressen."
+    }
+  },
+  "browserInfo": {
+    "title": "Browser-Informationen",
+    "subtitle": "Detaillierte Informationen zu deinem Browser, Betriebssystem und Gerät.",
+    "rawUserAgent": "Roher User-Agent",
+    "labels": {
+      "browser": "Browser",
+      "os": "Betriebssystem",
+      "language": "Sprache",
+      "screen": "Bildschirm",
+      "colorDepth": "Farbtiefe",
+      "timezone": "Zeitzone",
+      "connection": "Verbindung",
+      "cookies": "Cookies",
+      "doNotTrack": "Nicht verfolgen"
+    },
+    "cookies": { "enabled": "Aktiviert", "disabled": "Deaktiviert" },
+    "doNotTrack": { "enabled": "Aktiviert", "notSet": "Nicht gesetzt" },
+    "meta": {
+      "title": "Browser-Informationen — Browser, Betriebssystem & Gerät erkennen | meuip.me",
+      "description": "Erkenne deinen Browser, Betriebssystem, Sprache, Bildschirmauflösung und Gerätefähigkeiten. Kostenloses Browser-Fingerprint-Tool."
+    }
+  },
+  "httpHeaders": {
+    "title": "HTTP-Header",
+    "subtitle": "Die HTTP-Header, die dein Browser an diesen Server sendet.",
+    "meta": {
+      "title": "HTTP-Header — Zeige deine Browser-Anforderungsheader | meuip.me",
+      "description": "Inspiziere alle HTTP-Anforderungsheader, die dein Browser an den Server sendet. Unentbehrlich für Entwickler, Debugging und Datenschutzanalyse."
+    }
+  },
+  "webrtc": {
+    "title": "WebRTC-Leck-Test",
+    "subtitle": "Erkenne, ob WebRTC deine echte IP-Adresse preisgibt, auch wenn du ein VPN verwendest.",
+    "runTest": "WebRTC-Test ausführen",
+    "runAgain": "Erneut ausführen →",
+    "noLeak": {
+      "status": "Kein WebRTC-Leck",
+      "description": "Deine IP ist ordnungsgemäß verborgen."
+    },
+    "leaked": {
+      "status": "WebRTC-Leck erkannt",
+      "description": "Deine echte IP könnte offengelegt sein."
+    },
+    "localIps": "Lokale IPs (über WebRTC)",
+    "publicIps": "Öffentliche IPs (über WebRTC)",
+    "explainer": {
+      "heading": "Was ist ein WebRTC-Leck?",
+      "p1": "WebRTC ist eine Browserfunktion für Echtzeit-Kommunikation. Sie kann deine lokalen und öffentlichen IP-Adressen ohne dein Wissen an Websites weitergeben, selbst wenn du ein VPN verwendest.",
+      "p2": "Um WebRTC-Lecks zu verhindern, kannst du WebRTC in deinen Browser-Einstellungen deaktivieren oder eine Browser-Erweiterung verwenden."
+    },
+    "meta": {
+      "title": "WebRTC-Leck-Test — Prüfe ob WebRTC deine echte IP zeigt | meuip.me",
+      "description": "Erkenne WebRTC IP-Lecks in deinem Browser. Prüfe ob deine echte IP-Adresse auch beim VPN-Einsatz von Websites erfasst werden kann."
+    }
+  },
+  "seo": {
+    "whatIsIp": {
+      "heading": "Was ist eine IP-Adresse?",
+      "p1": "Eine IP-Adresse (Internet Protocol) ist ein eindeutiger numerischer Bezeichner, der jedem mit einem Netzwerk verbundenen Gerät zugewiesen wird. Sie funktioniert wie eine Postadresse für das Internet und teilt Routern mit, wohin Datenpakete gesendet und empfangen werden.",
+      "p2": "Es gibt zwei Typen: eine private IP, die in deinem lokalen Netzwerk (wie deinem Heim-WLAN) verwendet wird, und eine öffentliche IP – die Adresse, die der Rest des Internets sieht. Dieses Tool erkennt und zeigt deine öffentliche IP in Echtzeit an."
+    },
+    "ipv4vsIpv6": {
+      "heading": "IPv4 vs IPv6 — Was ist der Unterschied?",
+      "p1": "IPv4 verwendet 32-Bit-Adressen im bekannten Format \"203.0.113.1\" und unterstützt rund 4 Milliarden eindeutige Adressen. Da dieser Vorrat fast erschöpft ist, wurde IPv6 mit 128-Bit-Adressen eingeführt, das eine praktisch unbegrenzte Anzahl verbundener Geräte ermöglicht.",
+      "p2": "Die meisten modernen ISPs bieten Dual-Stack-Konnektivität an, d.h. du hast sowohl eine IPv4- als auch eine IPv6-Adresse. Nutze unser IPv6-Test-Tool, um zu prüfen, ob deine Verbindung das neuere Protokoll vollständig unterstützt."
+    },
+    "whyKnow": {
+      "heading": "Warum solltest du deine IP-Adresse kennen?",
+      "p1": "Das Kennen deiner öffentlichen IP-Adresse hat viele praktische Anwendungen:",
+      "li1": "Fernzugang einrichten (VPN, SSH, IP-Kameras) mit deiner Quell-IP",
+      "li2": "Überprüfen, ob dein VPN aktiv ist und deine echte IP tatsächlich maskiert",
+      "li3": "Verbindungsprobleme beim Kontakt mit deinem ISP-Support diagnostizieren",
+      "li4": "Den geografischen Standort verstehen, den Websites und Dienste dir zuschreiben"
+    },
+    "vpn": {
+      "heading": "VPN, Datenschutz und Online-Anonymität",
+      "p1": "Ein VPN (Virtuelles Privates Netzwerk) ersetzt deine öffentliche IP durch die IP-Adresse des VPN-Servers und verbirgt so deinen echten Standort vor Websites und Diensten. Bei einer VPN-Verbindung sollte diese Seite die IP des VPN-Servers anzeigen, nicht deine Heim-IP.",
+      "p2": "Aber Vorsicht: Neben der IP können andere Vektoren deine Identität preisgeben – wie DNS- und WebRTC-Lecks. Nutze unsere DNS-Leck-Test und WebRTC-Leck-Test Tools, um sicherzustellen, dass dein VPN dich von Anfang bis Ende schützt."
+    },
+    "tools": {
+      "heading": "Verwandte Tools",
+      "whatIsMyIp": "Was ist meine IP?",
+      "ipv6Test": "IPv6-Test",
+      "dnsLeak": "DNS-Leck-Test",
+      "webrtc": "WebRTC-Test",
+      "browser": "Browser-Info",
+      "headers": "HTTP-Header"
+    }
+  }
+}

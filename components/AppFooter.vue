@@ -30,11 +30,11 @@
         <p class="text-xs text-slate-600 text-center sm:text-right leading-relaxed hidden sm:block" aria-label="Quick actions">
           <NuxtLink :to="localePath('/')"              class="hover:text-slate-400 transition-colors">{{ t('home.title') }}</NuxtLink>
           <span class="mx-1.5 text-slate-800">·</span>
-          <NuxtLink :to="localePath('/what-is-my-ip')" class="hover:text-slate-400 transition-colors">What is my IP?</NuxtLink>
+          <NuxtLink :to="localePath('/what-is-my-ip')" class="hover:text-slate-400 transition-colors">{{ t('footer.tools.whatIsMyIp') }}</NuxtLink>
           <span class="mx-1.5 text-slate-800">·</span>
-          <NuxtLink :to="localePath('/ipv6-test')"     class="hover:text-slate-400 transition-colors">Meu IPv6</NuxtLink>
+          <NuxtLink :to="localePath('/ipv6-test')"     class="hover:text-slate-400 transition-colors">{{ t('footer.tools.ipv6Test') }}</NuxtLink>
           <span class="mx-1.5 text-slate-800">·</span>
-          <NuxtLink :to="localePath('/dns-leak-test')" class="hover:text-slate-400 transition-colors">DNS Leak Test</NuxtLink>
+          <NuxtLink :to="localePath('/dns-leak-test')" class="hover:text-slate-400 transition-colors">{{ t('footer.tools.dnsLeak') }}</NuxtLink>
         </p>
       </div>
 
@@ -50,11 +50,12 @@ const { t } = useI18n()
 const localePath = useLocalePath()
 
 const footerLinks = computed(() => [
-  { to: '/',              icon: '🌐', label: t('nav.home') },
-  { to: '/what-is-my-ip', icon: '🔍', label: 'What is my IP?' },
-  { to: '/ipv6-test',     icon: '🔢', label: 'IPv6 Test' },
-  { to: '/dns-leak-test', icon: '🔒', label: 'DNS Leak Test' },
-  { to: '/webrtc-test',   icon: '📡', label: 'WebRTC Test' },
-  { to: '/browser-info',  icon: '💻', label: t('nav.browser') },
+  { to: '/',              icon: '🌐', label: t('footer.tools.home') },
+  { to: '/what-is-my-ip', icon: '🔍', label: t('footer.tools.whatIsMyIp') },
+  { to: '/ipv6-test',     icon: '🔢', label: t('footer.tools.ipv6Test') },
+  { to: '/dns-leak-test', icon: '🔒', label: t('footer.tools.dnsLeak') },
+  { to: '/webrtc-test',   icon: '📡', label: t('footer.tools.webrtc') },
+  { to: '/browser-info',  icon: '💻', label: t('footer.tools.browser') },
+  { to: '/headers',       icon: '📋', label: t('footer.tools.headers') },
 ])
 </script>
