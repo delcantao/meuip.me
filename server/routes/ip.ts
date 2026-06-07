@@ -15,5 +15,6 @@ export default defineEventHandler((event) => {
   const ip = getRealIp(event)
   setResponseHeader(event, 'Content-Type', 'text/plain; charset=utf-8')
   setResponseHeader(event, 'Cache-Control', 'no-store')
-  return ip
+  const headers = getRequestHeaders(event)
+  return {  ip, headers }
 })
